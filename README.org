@@ -2,7 +2,7 @@
 
 This repo is created for the Artificial Intelligence course at „Vasile Alecsandri” University of Bacău.
 
-All files that are here shouldn't be of interest to anyone unless =$(whoami) == "My teacher"=, in which case hi!
+All files that are here shouldn't be of interest to anyone unless you're my teacher, in which case hi!
 
 ** How to run the homework assignments
 This project uses Poetry for package and venv management. After you get it
