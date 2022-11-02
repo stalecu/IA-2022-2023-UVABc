@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ia-2022-2023-uvabc"
+version = "0.1.0"
+description = "Laboratoarele pentru IA, an universitar 2022-2023, UVABc"
+authors = ["Alecu Ștefan-Iulian <uneven-shiver@protonmail.com>"]
+readme = "README.org"
+packages = [{include = "ai_lab"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+types-keyboard = "^0.13.2"
+keyboard = "^0.13.5"
+pillow = "^9.3.0"
+scipy = "^1.9.3"
+numpy = "^1.23.4"
+colorama = "^0.4.6"
+pytest = "^7.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
