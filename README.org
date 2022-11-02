@@ -1,8 +1,10 @@
 * IA-2022-2023-UVABc
 
-This repo is created for the Artificial Intelligence course at „Vasile Alecsandri” University of Bacău.
+This repo is created for the Artificial Intelligence course at „Vasile
+Alecsandri” University of Bacău.
 
-All files that are here shouldn't be of interest to anyone unless you're my teacher, in which case hi!
+All files that are here shouldn't be of interest to anyone unless you're my
+teacher, in which case hi!
 
 ** How to run the homework assignments
 This project uses Poetry for package and venv management. After you get it
@@ -15,6 +17,15 @@ poetry install
 python3 -m ai_lab.lab_N # N ∈ $(seq -f "%02g" 1 14)
 #+end_src
 
-Optionally, you can also run the tests (although there aren't many) using either =pytest= or =python3 -m pytest=.
+Optionally, you can also run the tests (although there aren't many) using either
+=pytest= or =python3 -m pytest=.
 
 The Python version used here is Python 3.11.
+
+*Disclaimer*: Depending on when you (aka you, teacher) are reading this, the
+ Piano Tiles reimplementation isn't done yet (because I'm working on it to make
+ sure it at least works on more platforms than just Windows, I'll have to see if
+ I can call it cross-platform). As I don't have a Mac lying around, I can't test
+ on that platform, but I have Windows 10, Windows 11, multiple versions of Linux
+ on two architectures and FreeBSD. I can only trust the word of the packages
+ that I use that it works for macOS as well.
