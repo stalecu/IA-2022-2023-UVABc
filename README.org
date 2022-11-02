@@ -1,0 +1,20 @@
+* IA-2022-2023-UVABc
+
+This repo is created for the Artificial Intelligence course at „Vasile Alecsandri” University of Bacău.
+
+All files that are here shouldn't be of interest to anyone unless =$(whoami) == "My teacher"=, in which case hi!
+
+** How to run the homework assignments
+This project uses Poetry for package and venv management. After you get it
+installed (using either brew or your neighborhood package manager, as per the
+official docs), you only need to do the following things:
+
+#+begin_src bash
+poetry shell # to activate the virtual environment
+poetry install
+python3 -m ai_lab.lab_N # N ∈ $(seq -f "%02g" 1 14)
+#+end_src
+
+Optionally, you can also run the tests (although there aren't many) using either =pytest= or =python3 -m pytest=.
+
+The Python version used here is Python 3.11.
