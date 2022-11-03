@@ -15,6 +15,12 @@ scipy = "^1.9.3"
 numpy = "^1.23.4"
 colorama = "^0.4.6"
 pytest = "^7.2.0"
+requests = "^2.28.1"
+beautifulsoup4 = "^4.11.1"
+secure-smtplib = "^0.1.1"
+python-dotenv = "^0.21.0"
+pyisemail = "^2.0.1"
+domain-validation = "^1.6.4"
 
 
 [build-system]
