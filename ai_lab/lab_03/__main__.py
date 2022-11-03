@@ -7,7 +7,7 @@ from types import NoneType
 def sendmail():
     import os
     from dotenv import load_dotenv, find_dotenv
-    from lab_03 import EmailAddress, EmailDomain, EmailMessage, EmailServer
+    from . import EmailAddress, EmailDomain, EmailMessage, EmailServer
 
     load_dotenv(find_dotenv())
 

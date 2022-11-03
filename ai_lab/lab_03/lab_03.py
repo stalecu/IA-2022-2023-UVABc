@@ -19,19 +19,22 @@ class Port(Enum):
 
 class EmailDomain:
     def __init__(self, domain: str):
-        if re.match("^.+\..+$", domain, re.I) is None:
+        if re.match("^.+\\..+$", domain, re.I) is None:
             msg = "Not a valid domain: '{}'".format(domain)
             raise ValueError(msg)
         record_types = ("MX", "AAAA", "A")
+        record_count = 0
         for record_type in record_types:
             try:
                 if len(dns.resolver.query(domain, record_type)):
+                    record_count += 1
                     self.domain = domain
             except:
                 continue
 
-        msg = "No DNS records of types {} found for {}".format(record_types, domain)
-        warnings.warn(msg)
+        if record_count == 0:
+            msg = "No DNS records of types {} found for {}".format(record_types, domain)
+            warnings.warn(msg)
 
 
 class EmailAddress:
@@ -39,7 +42,7 @@ class EmailAddress:
         """
         Create an email address of the form user@domain.
         """
-        diagnosis = is_email(f"{user}@{domain}", check_dns=True, diagnose=True)
+        diagnosis = is_email(f"{user}@{domain.domain}", diagnose=True)
         if (
             diagnosis
             and isinstance(diagnosis, bool)
@@ -48,7 +51,9 @@ class EmailAddress:
             self.user = user
             self.domain = domain
 
-        if not isinstance(diagnosis, bool):
+        if not isinstance(diagnosis, bool) and not isinstance(
+            diagnosis, ValidDiagnosis
+        ):
             raise ValueError(diagnosis.message)
 
     def __str__(self) -> str:
